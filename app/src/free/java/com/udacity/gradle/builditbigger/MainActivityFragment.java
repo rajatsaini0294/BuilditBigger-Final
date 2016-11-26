@@ -35,9 +35,9 @@ public class MainActivityFragment extends Fragment {
 
                     @Override
                     public void onJokeLoaded(String joke) {
-                        Intent intent = new Intent(getContext(), JokeActivity.class);
-                        intent.putExtra(JokeActivity.EXTRA_JOKE, joke);
-                        startActivity(intent);
+                            Intent intent = new Intent(getContext(), JokeActivity.class);
+                            intent.putExtra(JokeActivity.EXTRA_JOKE, joke);
+                            startActivity(intent);
                     }
                 }).execute();
             }

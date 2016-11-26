@@ -4,6 +4,7 @@ package com.udacity.gradle.builditbigger;
  * Created by rajat on 10/29/2016.
  */
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -19,8 +20,11 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
     @SuppressWarnings("unused")
     public static String LOG_TAG = EndpointAsyncTask.class.getSimpleName();
-    private final Listener mListener;
+    private  Listener mListener = null;
     private static MyApi myApiService = null;
+
+    private MainActivityFragment mainActivityFragment;
+    private Context context;
 
     public interface Listener {
         void onJokeLoaded(String joke);
@@ -60,6 +64,7 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String joke) {
-        mListener.onJokeLoaded(joke);
+            mListener.onJokeLoaded(joke);
+
     }
 }
