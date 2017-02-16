@@ -7,10 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.example.jokefactory.JokeActivity;
-import com.udacity.gradle.builditbigger.EndpointAsyncTask;
-import com.udacity.gradle.builditbigger.R;
 
 public class MainActivityFragment extends Fragment {
 
@@ -19,6 +18,13 @@ public class MainActivityFragment extends Fragment {
     public MainActivityFragment() {
         // Required empty public constructor
     }
+
+
+    public boolean testFlag = false;
+
+    ProgressBar loadingBar = null;
+
+    public String fetchedJoke = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

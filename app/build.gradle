@@ -38,7 +38,7 @@ dependencies {
     compile project(path: ':backend', configuration: 'android-endpoints')
     // testing
     // androidTestCompile 'com.android.support:support­annotations:23.2.0'
-    compile 'com.google.android.gms:play-services-ads:9.8.0'
+    freeCompile 'com.google.android.gms:play-services-ads:9.8.0'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.android.support:multidex:1.0.1'
